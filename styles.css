@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 520px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#puzzle {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+}
+
+#puzzle input {
+  width: 11.111%;
+  height: 0;
+  padding-top: 5.555%;
+  padding-bottom: 5.555%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: ubuntu;
+}
+
+#solve-button {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: slategray;
+  background-color: lightblue;
+  font-size: 1.5rem;
+  display: block;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  margin: 20px auto;
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  input[type="number"] {
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+  }
+}
+
+#puzzle input:hover {
+  background: rgb(214, 233, 240);
+}
+#puzzle input:focus {
+  background: lightblue;
+}
+
+#puzzle input:nth-child(n):nth-child(-n + 9) {
+  border-top-width: 4px;
+}
+#puzzle input:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom-width: 4px;
+}
+#puzzle input:nth-child(3n) {
+  border-right-width: 4px;
+}
+#puzzle input:nth-child(9n + 1) {
+  border-left-width: 4px;
+}
+#puzzle input:nth-child(n + 19):nth-child(-n + 27) {
+  border-bottom-width: 4px;
+}
+#puzzle input:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom-width: 4px;
+}
